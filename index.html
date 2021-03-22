@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Manager</title>
+        
+        <!-- Meta tags for bootstrap -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        
+        <!-- Stylesheet links -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+        
+        <!-- Font links -->
+        <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="content col-xs-12 col-xs-offset-0">
+                    <div class="page-header text-center">
+                        <h1><b>Password Manager</b></h1>
+                    </div>
+                    <form class="clearfix" name="passGen" id="passGen" onsubmit="ajaxSubmit(); return false" autocomplete="off">                        
+                        <div class="form-group" id="servInput">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-cloud fix-glyph"></span>
+                                <input type="text" class="form-control" id="serv" name="serv" placeholder="Enter Your Service" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="passInput">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-asterisk fix-glyph"></span>
+                                <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter Your Master Password" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="lengInput">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-resize-horizontal fix-glyph"></span>
+                                <input type="number" class="form-control" id="leng" name="leng" placeholder="Enter Your Desired Length" min="1" max="16" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row form-row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <button type="submit" class="btn btn-primary btn-block">Get Password</button>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="row form-row form-group">
+                            <div class="col-xs-8 col-xs-offset-2 input-group">
+                                <input type="password" class="form-control" id="out" name="out" placeholder="Your Password" disabled>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default noradius glyphicon glyphicon-eye-close fix-glyph" id="showPass"></button>
+                                </span>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default glyphicon glyphicon-copy fix-glyph" id="copy"></button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <input type="text" class="offscreen" id="copyarea"></input>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
